@@ -5,13 +5,13 @@
 class Eai < Formula
   desc "CLI for eai services: HIVE by cierra sandboxes"
   homepage "https://github.com/cierrateam/eai-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cierrateam/eai-cli/releases/download/v0.1.0/eai_0.1.0_darwin_amd64.tar.gz"
-      sha256 "33c598d602d31664ad837db6670eabf34bafd14ca437609e8394fa9e47021001"
+      url "https://github.com/cierrateam/eai-cli/releases/download/v0.1.1/eai_0.1.1_darwin_amd64.tar.gz"
+      sha256 "ff7450638b22f8dffb6b5aee45f1408934574333fe58e866b64a7c94caa0d607"
 
       define_method(:install) do
         bin.install "eai"
@@ -21,8 +21,8 @@ class Eai < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cierrateam/eai-cli/releases/download/v0.1.0/eai_0.1.0_darwin_arm64.tar.gz"
-      sha256 "3bc868d767de4da7fddd62cbc713c3246a132c4e0c79d21f8c7835aa994300f4"
+      url "https://github.com/cierrateam/eai-cli/releases/download/v0.1.1/eai_0.1.1_darwin_arm64.tar.gz"
+      sha256 "e7f17783b43526dafb2052f5b88fca8bb4c32be826644e2c349744b28a2895f1"
 
       define_method(:install) do
         bin.install "eai"
@@ -35,8 +35,8 @@ class Eai < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cierrateam/eai-cli/releases/download/v0.1.0/eai_0.1.0_linux_amd64.tar.gz"
-      sha256 "8b98fc42f6c12390957e0591ebb98e15d4d4945d9ab6e8c5c78cb7b518dc1a90"
+      url "https://github.com/cierrateam/eai-cli/releases/download/v0.1.1/eai_0.1.1_linux_amd64.tar.gz"
+      sha256 "7c84371b1b1d1c51ab1fcd352726f2ceb9cf9b689b2e30347dfe3995f637cc00"
       define_method(:install) do
         bin.install "eai"
         bash_completion.install "completions/eai.bash" => "eai"
@@ -45,8 +45,8 @@ class Eai < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cierrateam/eai-cli/releases/download/v0.1.0/eai_0.1.0_linux_arm64.tar.gz"
-      sha256 "42ae58d7f3f63460dfc19a7f3b4130d8964b596a7937edd78104d686e787fa12"
+      url "https://github.com/cierrateam/eai-cli/releases/download/v0.1.1/eai_0.1.1_linux_arm64.tar.gz"
+      sha256 "7254da263dc1283ac7b92dad74ec97fe41251d1dc9b143b4a163dbd83a7be43f"
       define_method(:install) do
         bin.install "eai"
         bash_completion.install "completions/eai.bash" => "eai"
